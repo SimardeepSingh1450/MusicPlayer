@@ -17,7 +17,9 @@
 }
 
 .artist{
-  height:28vh;
+  margin: 4%;
+  height:15vh;
+  max-width:210px;
   transform:rotate(360deg);
   animation: rotateanimation;
   animation-iteration-count: infinite;
@@ -34,6 +36,7 @@
 
 .App{
   display:flex;
+  margin-top:2.8%;
   flex-direction: column;
   justify-content:space-evenly;
   text-align:center;
@@ -41,19 +44,17 @@
   left:50vw;
   text-align:center;
   height:50%;
-  width:95%;
+  width:45%;
   border-style:solid;
-  border-width:3px;
+  border-width:4px;
   border-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius:18px;
-  min-width:40%;
+  border-radius:80px;
+  min-width:50%;
   overflow:hidden;
-  background-image: linear-gradient(to right, purple , yellow);
-}
-
-.vol{
-  width:12vw;
+  animation: move 15s linear;
+  animation-iteration-count: infinite;
+  
 }
 
 
@@ -70,6 +71,7 @@
   border-style:none;
   border-radius:100px;
   border-style:solid;
+  transition: all .2s ease-in-out;
 }
 
 .vol{
@@ -80,3 +82,168 @@
 
 }
 
+.bttns:hover{
+  color:white;
+  background-color:black;
+  cursor: pointer;
+  transform: scale(1.08);
+  
+}
+
+@keyframes move{
+  
+      100%,
+      0% {
+        background-color: rgb(209, 80, 80);
+        box-shadow: 25px 25px 60px rgb(255, 0, 127);
+        transform: scale(1.01);
+        border-radius: 20px;
+      }
+  
+      8% {
+        background-color: rgb(227, 169, 111);
+        box-shadow: 25px 25px 60px rgb(255, 0, 255);
+        transform:scale(1.01);
+        border-radius:25px;
+      }
+  
+      16% {
+        background-color: rgb(236, 236, 118);
+        box-shadow: 25px 25px 60px rgb(127, 0, 255);
+        transform:scale(1.02);
+        border-radius: 30px;
+      }
+  
+      25% {
+        background-color: rgb(180, 228, 131);
+        box-shadow:25px 25 px 60px rgb(0, 0, 255);
+        transform:scale(1.03);
+        border-radius:45px;
+      }
+  
+      33% {
+        background-color: rgb(114, 232, 114);
+        box-shadow:25px 25 px 60px rgb(0, 127, 255);
+        transform:scale(1.04);
+        border-radius:70px;
+      }
+  
+      41% {
+        background-color: rgb(110, 227, 169);
+        box-shadow:25px 25 px 60px rgb(0, 255, 255);
+        transform:scale(1.05);
+        border-radius:90px;
+      }
+  
+      50% {
+        background-color: rgb(124, 224, 224);
+        box-shadow:25px 25 px 60px rgb(0, 255, 127);
+        transform:scale(1.05);
+        border-radius:90px;
+      }
+  
+      58% {
+        background-color: rgb(124, 169, 214);
+        box-shadow:25px 25 px 60px rgb(0, 255, 0);
+        transform:scale(1.05);
+        border-radius:70px;
+      }
+  
+      66% {
+        background-color: rgb(85, 85, 197);
+        box-shadow:25px 25 px 60px rgb(127, 255, 0);
+        transform:scale(1.04);
+        border-radius:45px;
+      }
+  
+      75% {
+        background-color: rgb(169, 104, 235);
+        box-shadow:25px 25 px 60px rgb(255, 255, 0);
+        transform:scale(1.03);
+        border-radius:30px;
+      }
+  
+      83% {
+        background-color: rgb(217, 113, 217);
+        box-shadow:25px 25 px 60px rgb(255, 127, 0);
+        transform:scale(1.02);
+        border-radius:25px;
+      }
+  
+      91% {
+        background-color: rgb(222, 105, 163);
+        box-shadow:25px 25 px 60px rgb(255, 0, 127);
+        transform:scale(1.01);
+        border-radius:20px;
+      }
+    }
+
+body{
+background-color: rgb(216, 173, 173);
+    }
+
+.home{
+  display: inline-flex;
+  width:100%;
+  justify-content: center;
+  
+}
+
+.home .home2{
+  margin-left: 5%;
+  margin-top: 2.8%;
+border-style: solid;
+border-radius: 50px;
+min-width: 35%;
+max-width:36%;
+box-shadow: 40px 40px 100px black;
+background-color: rgb(59, 54, 54);
+overflow-y: scroll;
+height:40vw;
+border-width: 8px;
+}
+
+.home2color{
+  font-family: 'Gulzar', serif;
+animation: scrollanimation 230s linear;
+  animation-iteration-count:infinite;
+  color:#fff;
+}
+.home .home2::-webkit-scrollbar {
+  display: none;
+  animation: s;
+  /* for Chrome, Safari, and Opera */
+}
+
+
+@keyframes scrollanimation{
+    0% {
+transform:translateY(-0px)
+    }
+    
+    100%{
+      transform: translateY(-1300px);
+    }
+}
+
+.home2color:hover{
+  color:greenyellow;
+  transform: scale(1.02);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+
+.bttnh{
+  border-style: none;
+    border-radius: 100px;
+    border-style: solid;
+    transition: all .2s ease-in-out;
+    margin-left: 18.5vw;
+}
+
+.bttnh:hover{
+  color:white;
+  background-color: black;
+  cursor: pointer;
+}
